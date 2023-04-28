@@ -80,7 +80,7 @@ if(isset($_SESSION['mjwadmin_id']))
             success: function (response) {
                 console.log(response);
                 if(response==1){
-                    toastr.success('Hie!', 'Secondhand Shop!');
+                    toastr.success('Hii...!', 'Secondhand Shop!');
                     window.location = "dashboard.php";
                 }   
                 else{
@@ -128,7 +128,7 @@ if(isset($_SESSION['mjwadmin_id']))
                         minlength: "My name is bigger"
                     },
                     password: {
-                        required: "Please provide a password",
+                        required: "Please input a password",
                         minlength: "My password is more that 6 chars"
                     }
                 }   

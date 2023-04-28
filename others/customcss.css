@@ -1,0 +1,217 @@
+/*============ start about area css ==========*/@media (max-width: 1400px){    .full_pad {        padding-left: 75px;        padding-right: 75px;    }    .main_menu_area.full_pad{        padding-left: 75px;        padding-right: 75px;    }    .about-area .about-img{        overflow: hidden;    }    .about-me-left {        width: 100%;        float: none;    }    .about-me-right {        width: 100%;        float: none;    }    .about-me-right .img {        position: relative;        top: 0px;        text-align: center;        margin-top: 30px;        padding-bottom: 60px;    }    .about-me-left .about-content {        padding-top: 88px;        max-width: 900px;        margin: auto;    }    .about-me-left .about-content .sec-title {        margin-bottom: 65px;    }}
+.about-area {
+  /*padding: 145px 0px 0px;*/
+  overflow: hidden;
+}
+
+.about-title {
+  padding-bottom: 70px;
+}
+
+.about-title h2 {
+  font: 400 35px/35px "Playfair Display", serif;
+  color: #232323;
+}
+
+.about-title p {
+  font: 400 12px/25px "Playfair Display", serif;
+  color: #78797b;
+  letter-spacing: 0.72px;
+  font-style: italic;
+  padding-top: 8px;
+}
+
+.about-content {
+  /*padding-top: 177px;*/
+}
+
+.about-text p {
+  font: 400 13px/20px "Hind", sans-serif;
+  color: #232323;
+  text-align: justify;
+  letter-spacing: -0.1px;
+}
+
+.about-text p + p {
+  padding-top: 20px;
+}
+
+.full-about-sec {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 80px;
+}
+
+.about-slider-left {
+  width: calc(50% + 285px);
+  float: left;
+  position: relative;
+}
+
+.about-slider-right {
+  width: calc(50% - 285px);
+  float: left;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+.about-slider-right .about-text {
+  max-width: 270px;
+  margin: 0px auto 0px 30px;
+}
+
+.slider_nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  background: #fff;
+  font-size: 30px;
+  line-height: 100px;
+  color: #78797b;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.slider_nav .testi_prev, .slider_nav .testi_next {
+  display: inline-block;
+  padding: 0px 40px;
+}
+
+.slider_nav .testi_prev:hover, .slider_nav .testi_next:hover {
+  color: #232323;
+}
+
+.slider_nav .testi_next:after {
+  content: "";
+  height: 12px;
+  width: 1px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: #bbbcbd;
+}
+
+/*============ End about area css ==========*/
+/*--================ Start about me Area =================*/
+.full-about-area {
+  position: relative;
+}
+
+.full-about-bg {
+  background: #faf8f7;
+}
+
+.about-me-left {
+  width: calc(50% + 315px);
+  float: left;
+}
+
+.about-me-left .about-content {
+  padding-top: 88px;
+  max-width: 900px;
+  margin: 0px 30px 66px auto;
+}
+
+.about-me-left .about-content .sec-title {
+  margin-bottom: 140px;
+}
+
+.siocial-l {
+  text-align: right;
+  padding-top: 32px;
+}
+
+.siocial-l li {
+  font-size: 16px;
+  display: inline-block;
+  font-family: "Kaushan Script", cursive;
+  padding: 0px 14px;
+  color: #232323;
+  position: relative;
+}
+
+.siocial-l li i {
+  padding-right: 8px;
+}
+
+.siocial-l li a i {
+  padding-right: 0px;
+}
+
+.siocial-l li:nth-child(2):before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #ededed;
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.siocial-l li:nth-child(3) {
+  padding: 0px 10px;
+}
+
+.siocial-l li:nth-child(3) a {
+  color: #4d70a8;
+}
+
+.siocial-l li:nth-child(4) {
+  padding: 0px 10px;
+}
+
+.siocial-l li:nth-child(4) a {
+  color: #232323;
+}
+
+.siocial-l li:nth-child(5) {
+  padding: 0px 0px 0px 10px;
+}
+
+.siocial-l li:nth-child(5) a {
+  color: #e3401d;
+}
+
+.about-me-right {
+  width: calc(50% - 315px);
+  float: right;
+  position: relative;
+}
+
+.about-me-right .img {
+  position: absolute;
+  top: 70px;
+}
+
+.about-me-right .img img {
+  max-width: 100%;
+}
+
+.about-me-right .load-btn {
+  background: #232323;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.about-me-right .load-btn:before {
+  background: #fff;
+}
+
+/*--================ End about me Area =================*/

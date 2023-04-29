@@ -8,7 +8,6 @@
 	global $web;
 	global $web1;
 	
-	//$link=mysqli_connect("localhost","vhvdil83_mjw","MJW@@2018","vhvdil83_mjworld");
 	$link=mysqli_connect("localhost","root","","vhvdil83_mjworld");
 	
 	// Check connection// Check connection
@@ -17,13 +16,7 @@
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 	
-	/*$mjemail='info@mitaljewels.com';
-	$web="http://mtj.world/mtjwmin/";
-	$web1="http://mtj.world/";*/
-	$mjemail='info@mitaljewels.com';
-		$web="http://localhost/mtj.world";
-//$web="http://mtj.world/";
-	// $web1="http://mtj.world/others/";
-		$web1="http://localhost/mtj.world";
+		$web="http://localhost/secondhand_shop";
+		$web1="http://localhost/secondhand_shop";
 	
 ?>

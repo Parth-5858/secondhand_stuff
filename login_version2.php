@@ -41,9 +41,7 @@ if(isset($_SESSION['mjwadmin_id']))
                 <h3><center>Login Form</center></h3>
                                 </div>
 
-                                
-
-                    
+                   
             <form class="form-horizontal" id="loginForm" role="form" >
                     <label class="" for="username">Username:</label>
                 <div class="form-group">

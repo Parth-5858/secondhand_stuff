@@ -13,7 +13,7 @@ ob_clean();
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 	
-	$mjemail='info@mitaljewels.com';
+	
 		$web="http://localhost/secondhand_shop/";
 		$web1="http://localhost/secondhand_shop/";
 	

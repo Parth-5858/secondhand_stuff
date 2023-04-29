@@ -21,7 +21,7 @@ if(isset($_SESSION['mjwadmin_id']))
 
                 <div class="navbar">
                     <div class="container">
-                        <a class="navbar-brand" href="dashboard.php">Secondhand Shop For Students</a>
+                        <a class="navbar-brand" href="dashboard.php">Secondhand Shop</a>
                     </div>
                 </div><!-- /navbar -->
 

@@ -5,7 +5,6 @@ ob_clean();
 	global $web;
 	global $web1;
 	
-	/*$link=mysqli_connect("localhost","vhvdil83_mjw","MJW@@2018","vhvdil83_mjworld");*/
 	$link=mysqli_connect("localhost","root","","vhvdil83_mjworld");
 	
 	// Check connection// Check connection
@@ -16,8 +15,6 @@ ob_clean();
 	
 	$mjemail='info@mitaljewels.com';
 		$web="http://localhost/secondhand_shop/";
-//$web="http://mtj.world/";
-	// $web1="http://mtj.world/others/";
 		$web1="http://localhost/secondhand_shop/";
 	
 	function seo_friendly_url($string){

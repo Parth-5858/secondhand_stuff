@@ -92,7 +92,18 @@ include("include/connect.php");
 		<div class="item">
 			<img src="http://localhost/secondhand_shop/onhome-slider/books-12935969.jpg" alt="">
 		</div>
-						
+			<?php
+				$data= 0;
+				$sql=mysqli_query($link," select * from slider where type='1'");
+				while($row=mysqli_fetch_array($sql)){
+					//print_r($row);
+					$data.='<div class="item">
+								<img src="http://localhost/secondhand_shop/onhome-slider/'.$row['image'].'" alt="">
+							</div>'; 
+							
+				} 
+				echo $data;
+			?>			
 				
 		</div>
 	</div>

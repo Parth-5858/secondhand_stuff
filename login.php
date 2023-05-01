@@ -1,4 +1,5 @@
 <?php 
+
 include("include/connect.php");
 
 if(isset($_SESSION['mjwadmin_id']))
@@ -13,57 +14,140 @@ if(isset($_SESSION['mjwadmin_id']))
   <?php include("include/header.php"); ?>    
     <body class="loginPage" >
 
-    <div class="container">
+    <div class="loader-container circle-pulse-multiple">
+        <div class="loader">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_four"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_one"></div>
+            </div>
+            <h2 class="l-text">Secondhand Shop</h2>
+        </div>
+    </div>
 
-        <div id="header">
+    
+    <div class="offcanvas_menu_click">
+        <div class="off_menu_inner">
+        <span class="cross-btn cross"><i class="lnr lnr-cross"></i></span>
+        <div class="off_menu_relative">
+            <ul>
+                <li><a href="http://mtj.world/others/categories.php/Watches/MTY=">Watches</a></li>
+                <li><a href="<?php echo $web; ?>contact.php">Contact Us</a></li>
+                <li><a href="<?php echo $web; ?>#aboutus">About Us</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
 
-            <div class="row">
+    <header class="main_menu_area full_pad">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<?php echo $web; ?>index.php"><img src="img/logo.jpg" alt="" width="155px"></a>
+            </div>
 
-                <div class="navbar">
-                    <div class="container">
-                        <a class="navbar-brand" href="dashboard.php">Secondhand Shop for Students</a>
-                    </div>
-                </div><!-- /navbar -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav menu">
+                    <li class="active"><a href="<?php echo $web; ?>index.php">Home</a></li>
+                    <li  class="dropdown submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo $web1; ?>others/categories.php/Watches/MTY=">Mobile and Tablet</a></li>
+                            <li><a href="<?php echo $web; ?>customized-jewelery.php">Computer & laptop</a></li>
+                            <li><a href="<?php echo $web; ?>bezel-details.php">Electronic Appliances</a></li>
+                            <li><a href="<?php echo $web; ?>bezel-details.php">Books & Novels</a></li>
+                            <li><a href="<?php echo $web; ?>bezel-details.php">Stationery</a></li>
+                            <li><a href="<?php echo $web; ?>bezel-details.php">Music, sports & gym</a></li>
+                            <li><a href="<?php echo $web; ?>bezel-details.php">bags-Luggage</a></li>
+                        </ul>
+                    </li>
+                    </li>
+                    <li><a href="<?php echo $web; ?>contact.php">Contact</a></li>
+                    <li>
+                        <?php 
+ 
+                            if(isset($_SESSION['mjwadmin_id'])){
 
-            </div><!-- End .row -->
+                                $login = '<a href="#">'. $_SESSION['mjwadmin_name'].'</a>
 
-        </div><!-- End #header -->
-
-    </div><!-- End .container -->    
-
-    <div class="container">
-
-        <div class="loginContainer">
-            <form class="form-horizontal" id="loginForm" role="form" >
-                <div class="form-group">
-                    <label class="" for="username">Username:</label>
-                    <div class="col-lg-12">
-                        <input id="username" type="text" name="username" class="form-control" value="" placeholder="Enter your username ...">
-                        <span class="icon16 icomoon-icon-user right gray marginR10"></span>
-                    </div>
-                </div><!-- End .form-group  -->
-                <div class="form-group">
-                    <label class="" for="password">Password:</label>
-                    <div class="col-lg-12">
-                        <input id="password" type="password" name="password" value="" class="form-control">
-                        <span class="icon16 icomoon-icon-lock right gray marginR10"></span>
+                                    <li><a href="include/allfunction.php?action=signout"><i class="fa fa-sign-out">Logout</i></a></li>';
+                            }else{
+                                $login = '<a href='.$web.'login.php>Login</a>';
+                            }
+                            echo $login;
+                        ?>
                         
-                    </div>
-                </div><!-- End .form-group  -->
-                
-                <a href="forgot_password.php" class="fpwd">Forgot Password</a>
-                <div class="form-group">
-                    <div class="col-lg-12 clearfix form-actions">
-                        <div class="checkbox left">
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="search_dropdown"><a href="#"><i class="fa fa-call"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<section class="contact-area full_pad nav-space">
+    <div class="contact-area-bg">
+    <div class="container">
+        <div class="sec-title">
+            <h2>SIGN IN</h2>
+        </div>
+        <div class="col-md-3">
+        <div class="contact-img">
+        <div class="contact-slider owl-carousel">
+        <div class="item">
+        <img src="img/blog-details/contact-slider.jpg" alt="">
+        </div>
+        <div class="item">
+        <img src="img/blog-details/contact-slider.jpg" alt="">
+        </div>
+        <div class="item">
+        <img src="img/blog-details/contact-slider.jpg" alt="">
+        </div>
+        </div>
+        </div>
+        </div>
+<div class="col-md-7">
+    <form class="form_inner contact_form " id="loginForm" role="form">
+<div class="form-group col-md-12">
+    <label class="" for="username">Student ID:</label>
+<input type="text" class="form-control" id="username" pattern="^[a-zA-Z0-9]+@uwl\.com$" name="username" placeholder="12345@uwl.com" required>
+</div>
+<div class="form-group col-md-12">
+    <label class="" for="password">Password:</label>
+<input type="password" class="form-control" id="password" name="password" required placeholder="Enter your Password">
+</div>
+<a href="forgot_password.php" class="fpwd">Forgot Password</a>
+<div class="checkbox left">
                             <label><input type="checkbox" id="keepLoged" value="Value" class="styled" name="logged" /> Keep me logged in</label>
                         </div>
-                        <button type="submit" class="btn btn-info right" id="loginBtn"><span class="icon16 icomoon-icon-enter white"></span> Login</button>
-                    </div>
-                </div><!-- End .form-group  -->
-            </form>
-        </div>
+<div class="form-btn col-md-12">
+<button type="submit" value="submit" class="btn submit_btn"  id="loginBtn">Login</button>
+</div>
 
+<div class="see-btn">
+<a href="<?php $web;?>sign_up.php" class="btn btn">SIGN UP</a>
+</div>
+</form>
+
+
+    </div>
     </div><!-- End .container -->
+    </div>
+        <div class="offcanvus_menu">
+        <div class="nav-button">
+        <div class="nav_inner">
+        <span></span>
+        <span></span>
+        </div>
+        </div>
+        </div>
+</section>
 
     <!-- Le javascript
     ================================================== -->
@@ -81,11 +165,14 @@ if(isset($_SESSION['mjwadmin_id']))
             success: function (response) {
                 console.log(response);
                 if(response==1){
-                    toastr.success('Hie!', 'Mital Jewels!');
-                    window.location = "dashboard.php";
+                    toastr.success('Hie!', 'Secondhand Shop!');
+                    setTimeout(function() {
+                        location.reload();
+                    }, 1000);
+                    window.location = "index.php";
                 }   
                 else{
-                    toastr.error('Opps! I Doub\'t The Credentials !', 'Mital Jewels!');
+                    toastr.error('Opps! I Doub\'t The Credentials ! or SIGN UP', 'Secondhand Shop!');
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {

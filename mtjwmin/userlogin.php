@@ -42,7 +42,7 @@ if(!isset($_SESSION['vhvadmin_id']))
 
                 <div class="heading">
 
-                    <h3>View User Login</h3>                    
+                    <h3>View The User Login</h3>                    
 
 				</div><!-- End .heading-->
 

@@ -143,7 +143,7 @@ if(isset($_SESSION['mjwadmin_id']))
                     },
                     password: {
                         required: "Please provide a password",
-                        minlength: "My password is more that 6 chars"
+                        minlength: "My password is more than  6 characters."
                     }
                 }   
             });

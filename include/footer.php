@@ -2,7 +2,7 @@
 		<div class="footer_bg">
 			<div class="container">
 				<div class="footer_copyright">
-				<h6>Website Diamontized By <b><a href="<?php echo $web; ?>index.php">UWL Student<b></a></h6>
+				<h6>Website Diamontized By <b><a href="<?php echo $web; ?>index.php">UWL Students<b></a></h6>
 
 				</div>
 			</div>

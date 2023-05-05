@@ -41,7 +41,6 @@ include("include/connect.php");
         <span class="cross-btn cross"><i class="lnr lnr-cross"></i></span>
         <div class="off_menu_relative">
             <ul>
-            <li><a href="http://localhost/secondhand_shop/others/categories.php/Watches/MTY=">How it Works?</a></li>
             <li><a href="<?php echo $web; ?>contact.php">Contact Us</a></li>
             <li><a href="<?php echo $web; ?>about.php">About Us</a></li>
             </ul>
@@ -77,7 +76,7 @@ include("include/connect.php");
 </div>
 <div class="row">
 <div class="col-md-4 about-text">
-<p>>At Second Hand Student Shop, we are dedicated to providing affordable, high-quality second-hand items to students. We understand that college and university can be a financially challenging time for many students, and that's why we strive to offer a wide range of items at prices that won't break the bank.</p>
+<p>At Second Hand Student Shop, we are dedicated to providing affordable, high-quality second-hand items to students. We understand that college and university can be a financially challenging time for many students, and that's why we strive to offer a wide range of items at prices that won't break the bank.</p>
 <p>Our shop specializes in second-hand textbooks, but we also offer a variety of other items such as stationery, electronics, and furniture. All of our items are carefully inspected to ensure that they are in good condition and ready for use by the next student.</p>
 </div>
 <div class="col-md-4 about-text">

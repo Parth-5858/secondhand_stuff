@@ -99,11 +99,11 @@ include("include/connect.php");
    <form class="form-horizontal" data-parsley-validate  enctype="multipart/form-data" id="addproductForm" role="form" >              
         <input type="hidden" name="pid" id="pid" class="form-control">
         <div class="form-group col-md-12">
-            <label class="" for="type">Brand Name:</label>
-            <input type="text" class="form-control" id="type" name="brand" placeholder="Enter Brand Name" required>
+            <label class="" for="brand">Brand Name:</label>
+            <input type="text" class="form-control" id="brand" name="brand" placeholder="Enter Brand Name" required>
         </div> 
         <div class="form-group col-md-12">
-            <label class="" for="type">Type:</label>
+            <label class="" for="stype">Type:</label>
             <select name="stype" id="stype" class="nostyle form-control brand" >
                 <option disabled selected>Select Any</option>   
                 <option value="electronic_appliances">Electronic Appliances</option>
@@ -114,19 +114,23 @@ include("include/connect.php");
             </select>
         </div>
         <div class="form-group col-md-12">
-            <label class="" for="name">Product Name:</label>
+            <label class="" for="proname">Product Name:</label>
             <input type="text" class="form-control" id="proname" name="proname" placeholder="Enter Product Name" required>
         </div>
         <div class="form-group col-md-12">
-            <label class="" for="email">Price:</label>
+            <label class="" for="price">Price:</label>
             <input type="text" class="form-control" id="price" name="price" placeholder="Price" required>
         </div>
         <div class="form-group col-md-12">
-            <label class="" for="contact">Weight:</label>
+            <label class="" for="weight">Weight:</label>
             <input type="text" class="form-control" id="weight" name="weight" placeholder="Weight" required>
         </div>
         <div class="form-group col-md-12">
-            <label class="" for="contact">Description:</label>
+            <label class="" for="qty">Qty:</label>
+            <input type="text" class="form-control" id="qty" name="qty" placeholder="Qty" required>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="" for="pdescription">Description:</label>
             <textarea id="pdescription" name="pdescription" class="form-control" rows="5" ></textarea>
         </div>
         <div class="form-group col-md-12">

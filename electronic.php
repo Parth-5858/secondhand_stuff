@@ -2,7 +2,9 @@
 <?php
 session_start();
 include("include/connect.php");
+if(isset($_SESSION['mjwadmin_id'])){
 $id = $_GET['id'];
+}
 ?>
 
 <html lang="en">
@@ -38,7 +40,6 @@ $id = $_GET['id'];
                 <span class="cross-btn cross"><i class="lnr lnr-cross"></i></span>
                 <div class="off_menu_relative">
                         <ul>
-                        <li><a href="http://localhost/secondhand_shop/others/categories.php/Watches/MTY=">How it Works?</a></li></br>
                         <li><a href="<?php echo $web; ?>contact.php">Contact Us</a></li></br>
                         <li><a href="<?php echo $web; ?>about.php">About Us</a></li>
                         </ul>
@@ -65,8 +66,23 @@ $id = $_GET['id'];
 <section class="sec-relative full_pad nav-space">
 <div class="latest_work_area l-portfolio-bg">
 <div class="container">
+ 
 <div class="sec-title">
 <h2>Product for sell</h2>
+<div class="see-btn">
+
+                        <?php 
+ 
+                            if(isset($_SESSION['mjwadmin_id'])){
+
+                                $login = '<a href="'.$web.'add_student_product.php" class="btn btn-default">Add Your Product</a>';
+                            }else{
+                                $login = '<a href='.$web.'login.php>Login</a>';
+                            }
+                            echo $login;
+                        ?>
+        
+</div> 
 </div>
 <div class="row latest_work_inner">
         <?php

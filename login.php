@@ -32,9 +32,8 @@ if(isset($_SESSION['mjwadmin_id']))
         <span class="cross-btn cross"><i class="lnr lnr-cross"></i></span>
         <div class="off_menu_relative">
             <ul>
-                <li><a href="http://mtj.world/others/categories.php/Watches/MTY=">Watches</a></li>
-                <li><a href="<?php echo $web; ?>contact.php">Contact Us</a></li>
-                <li><a href="<?php echo $web; ?>#aboutus">About Us</a></li>
+            <li><a href="<?php echo $web; ?>contact.php">Contact Us</a></li></br>
+            <li><a href="<?php echo $web; ?>about.php">About Us</a></li>
             </ul>
         </div>
         </div>
@@ -52,42 +51,7 @@ if(isset($_SESSION['mjwadmin_id']))
                 <a class="navbar-brand" href="<?php echo $web; ?>index.php"><img src="img/logo.jpg" alt="" width="155px"></a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav menu">
-                    <li class="active"><a href="<?php echo $web; ?>index.php">Home</a></li>
-                    <li  class="dropdown submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Products</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="<?php echo $web1; ?>others/categories.php/Watches/MTY=">Mobile and Tablet</a></li>
-                            <li><a href="<?php echo $web; ?>customized-jewelery.php">Computer & laptop</a></li>
-                            <li><a href="<?php echo $web; ?>bezel-details.php">Electronic Appliances</a></li>
-                            <li><a href="<?php echo $web; ?>bezel-details.php">Books & Novels</a></li>
-                            <li><a href="<?php echo $web; ?>bezel-details.php">Stationery</a></li>
-                            <li><a href="<?php echo $web; ?>bezel-details.php">Music, sports & gym</a></li>
-                            <li><a href="<?php echo $web; ?>bezel-details.php">bags-Luggage</a></li>
-                        </ul>
-                    </li>
-                    </li>
-                    <li><a href="<?php echo $web; ?>contact.php">Contact</a></li>
-                    <li>
-                        <?php 
- 
-                            if(isset($_SESSION['mjwadmin_id'])){
-
-                                $login = '<a href="#">'. $_SESSION['mjwadmin_name'].'</a>
-
-                                    <li><a href="include/allfunction.php?action=signout"><i class="fa fa-sign-out">Logout</i></a></li>';
-                            }else{
-                                $login = '<a href='.$web.'login.php>Login</a>';
-                            }
-                            echo $login;
-                        ?>
-                        
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="search_dropdown"><a href="#"><i class="fa fa-call"></i></a></li>
-                </ul>
-            </div>
+            <?php include("include/menu_header.php"); ?>
         </nav>
     </header>
 
@@ -101,13 +65,13 @@ if(isset($_SESSION['mjwadmin_id']))
         <div class="contact-img">
         <div class="contact-slider owl-carousel">
         <div class="item">
-        <img src="img/blog-details/contact-slider.jpg" alt="">
+        <img src="img/blog-details/7.jpeg" alt="">
         </div>
         <div class="item">
-        <img src="img/blog-details/contact-slider.jpg" alt="">
+        <img src="img/blog-details/5.jpeg" alt="">
         </div>
         <div class="item">
-        <img src="img/blog-details/contact-slider.jpg" alt="">
+        <img src="img/blog-details/6.jpeg" alt="">
         </div>
         </div>
         </div>

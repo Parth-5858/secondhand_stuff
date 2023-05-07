@@ -29,7 +29,6 @@ include("include/connect.php");
         <span class="cross-btn cross"><i class="lnr lnr-cross"></i></span>
         <div class="off_menu_relative">
             <ul>
-                <li><a href="http://mtj.world/others/categories.php/Watches/MTY=">Watches</a></li>
                 <li><a href="<?php echo $web; ?>contact.php">Contact Us</a></li>
                 <li><a href="<?php echo $web; ?>#aboutus">About Us</a></li>
             </ul>
@@ -48,43 +47,7 @@ include("include/connect.php");
                 </button>
                 <a class="navbar-brand" href="<?php echo $web; ?>index.php"><img src="img/logo.jpg" alt="" width="155px"></a>
             </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav menu">
-                    <li class="active"><a href="<?php echo $web; ?>index.php">Home</a></li>
-                    <li  class="dropdown submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Products</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="<?php echo $web1; ?>others/categories.php/Watches/MTY=">Mobile and Tablet</a></li>
-                            <li><a href="<?php echo $web; ?>customized-jewelery.php">Computer & laptop</a></li>
-                            <li><a href="<?php echo $web; ?>bezel-details.php">Electronic Appliances</a></li>
-                            <li><a href="<?php echo $web; ?>bezel-details.php">Books & Novels</a></li>
-                            <li><a href="<?php echo $web; ?>bezel-details.php">Stationery</a></li>
-                            <li><a href="<?php echo $web; ?>bezel-details.php">Music, sports & gym</a></li>
-                            <li><a href="<?php echo $web; ?>bezel-details.php">bags-Luggage</a></li>
-                        </ul>
-                    </li>
-                    </li>
-                    <li><a href="<?php echo $web; ?>contact.php">Contact</a></li>
-                    <li>
-                        <?php 
- 
-                            if(isset($_SESSION['mjwadmin_id'])){
-
-                                $login = '<a href="#">'. $_SESSION['mjwadmin_name'].'</a>
-
-                                    <li><a href="include/allfunction.php?action=signout"><i class="fa fa-sign-out">Logout</i></a></li>';
-                            }else{
-                                $login = '<a href='.$web.'login.php>Login</a>';
-                            }
-                            echo $login;
-                        ?>
-                        
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="search_dropdown"><a href="#"><i class="fa fa-call"></i></a></li>
-                </ul>
-            </div>
+<?php include("include/menu_header.php"); ?>
         </nav>
     </header>
 
@@ -97,7 +60,7 @@ include("include/connect.php");
      
 <div class="col-md-12">
    <form class="form-horizontal" data-parsley-validate  enctype="multipart/form-data" id="addproductForm" role="form" >              
-        <input type="hidden" name="pid" id="pid" class="form-control">
+        <input type="hidden" name="pid" id="pid" value="<?php echo $_SESSION['mjwadmin_id'];?>" class="form-control">
         <div class="form-group col-md-12">
             <label class="" for="brand">Brand Name:</label>
             <input type="text" class="form-control" id="brand" name="brand" placeholder="Enter Brand Name" required>
@@ -134,7 +97,7 @@ include("include/connect.php");
             <textarea id="pdescription" name="pdescription" class="form-control" rows="5" ></textarea>
         </div>
         <div class="form-group col-md-12">
-            <label class="" for="required">Image:</label>
+            <label class="" for="homeimage">Image:</label>
             <input class="form-control" id="homeimage" name="homeimage" type="file" />
         </div><!-- End .form-group  -->
 

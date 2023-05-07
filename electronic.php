@@ -86,7 +86,7 @@ $id = $_GET['id'];
 </div>
 <div class="row latest_work_inner">
         <?php
-$catdata='';
+        $catdata='';
         $csql=mysqli_query($link,"select * from products");
         while($getcdata = mysqli_fetch_array($csql)){
                
@@ -118,16 +118,16 @@ $catdata='';
 </div>
 </div>
 <div class="offcanvus_menu">
-<div class="lang-n">
-<div class="nav-button">
-<div class="nav_inner">
-<span></span>
-<span></span>
-</div>
-</div>
+        <div class="lang-n">
+        <div class="nav-button">
+        <div class="nav_inner">
+        <span></span>
+        <span></span>
+        </div>
+        </div>
+        </div>
 </div>
 </section>
-
 
 
 <?php include("include/footer.php"); ?>
